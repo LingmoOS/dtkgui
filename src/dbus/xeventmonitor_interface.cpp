@@ -15,7 +15,7 @@ Q_CONSTRUCTOR_FUNCTION(registerAreaListMetaType);
 
 QDBusArgument &operator<<(QDBusArgument &a, const ComDeepinApiXEventMonitorInterface::AreaList &rects)
 {
-    // com.deepin.api.XEventMonitor.RegisterAreas
+    // com.lingmo.api.XEventMonitor.RegisterAreas
     // (Array of [Struct of (Int32, Int32, Int32, Int32)] areas, Int32 flag)
     // use [x1, y1, x2, y2] instead of [x1, y1, w, h]
     a.beginArray(qRegisterMetaType<QRect>());

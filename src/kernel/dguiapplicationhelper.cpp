@@ -187,7 +187,7 @@ LoadManualServiceWorker::~LoadManualServiceWorker()
 
 void LoadManualServiceWorker::run()
 {
-    QDBusInterface("com.deepin.Manual.Search",
+    QDBusInterface("com.lingmo.Manual.Search",
                    "/com/deepin/Manual/Search",
                    "com.deepin.Manual.Search");
 }
@@ -1881,7 +1881,7 @@ void DGuiApplicationHelper::handleHelpAction()
     QString appid = qApp->applicationName();
 
     // new interface use applicationName as id
-    QDBusInterface manual("com.deepin.Manual.Open",
+    QDBusInterface manual("com.lingmo.Manual.Open",
                           "/com/deepin/Manual/Open",
                           "com.deepin.Manual.Open");
     QDBusPendingCall call = manual.asyncCall("ShowManual", appid);

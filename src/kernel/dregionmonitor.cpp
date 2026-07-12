@@ -133,7 +133,7 @@ void DRegionMonitor::setCoordinateType(DRegionMonitor::CoordinateType type)
 DRegionMonitorPrivate::DRegionMonitorPrivate(DRegionMonitor *q)
     : DObjectPrivate(q)
 {
-    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String("org.deepin.dde.XEventMonitor1"))) {
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String("org.lingmo.XEventMonitor1"))) {
         eventInter = new XEventMonitor("org.deepin.dde.XEventMonitor1", "/org/deepin/dde/XEventMonitor1",
                                        "org.deepin.dde.XEventMonitor1", q);
     } else {

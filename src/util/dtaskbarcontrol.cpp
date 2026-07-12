@@ -150,7 +150,7 @@ void DTaskbarControl::sendMessage(const QVariantMap &params)
         return;
     }
 
-    auto message = QDBusMessage::createSignal("/com/deepin/dtkgui/DTaskbarControl",
+    auto message = QDBusMessage::createSignal("/com/lingmo/dtkgui/DTaskbarControl",
                                               "com.canonical.Unity.LauncherEntry",
                                               "Update");
 
